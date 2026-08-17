@@ -1,0 +1,4 @@
+baseURL = 'https://rzha.github.io'
+locale = 'en-us'
+title = 'blog'
+theme = 'archie'
