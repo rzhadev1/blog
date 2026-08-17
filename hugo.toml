@@ -2,3 +2,6 @@ baseURL = 'https://rzha.github.io'
 locale = 'en-us'
 title = 'blog'
 theme = 'archie'
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
