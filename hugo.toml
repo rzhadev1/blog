@@ -1,7 +1,41 @@
-baseURL = 'https://rzha.github.io'
+baseURL = 'https://rzhadev1.github.io/'
 locale = 'en-us'
-title = 'blog'
-theme = 'archie'
+title = 'Home'
+theme = 'shibui'
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[menu]
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 1
+
+[build]
+  writeStats = true
+
+[frontmatter]
+  date = ['date', 'publishDate', 'lastmod']
+  expiryDate = ['expiryDate']
+  lastmod = [':git', 'lastmod', 'date', 'publishDate']
+  publishDate = ['publishDate', 'date']
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  # By default, Goldmark trims unsafe outputs which might prevent some shortcodes from rendering.
+  # It is recommended to set markup.goldmark.renderer.unsafe=true if you encounter problems.
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Enable user to embed HTML snippets in Markdown content.
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    noClasses = true
+    tabWidth = 4
+    style = "algol_nu"
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = true
